@@ -51,25 +51,31 @@ button:hover {
   background-color: #0056b3;
 }
 
-ul {
+ol {
   list-style: none;
   padding: 0;
 }
 
+
 li {
+  /*text-align: center;*/
   margin-bottom: 10px;
+  position: relative; 
 }
 
 li button {
   margin-left: 10px;
   background-color: #dc3545;
+  visibility: hidden;
 }
+
+li:hover button {
+  background-color: rgb(237, 16, 38);
+  visibility: visible; 
+}
+
 
 h1 {
   text-align: center;
   margin-bottom: 20px;
-}
-
-li button:hover {
-  background-color: #a23a44;
 }
