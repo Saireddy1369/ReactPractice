@@ -1,41 +1,25 @@
-/*body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}*/
 .container {
-  max-width: 400px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 20px;
-  border: 1px solid #ccc;
+  border: 1px solid #0d1414;
   border-radius: 5px;
-  background-color: #f9f9f9;
-  display: flex; 
-  flex-direction: column; 
-  align-items: center; 
+  background-color: #144a51;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-
+.todo-item {
+  margin-bottom: 10px; 
+}
+.todo-text {
+  font-weight: bold; 
+}
 form {
   margin-bottom: 20px;
   display: flex;
-  flex-direction: column; 
-  align-items: center; 
-}
-
-input[type="text"] {
-  width: 70%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  margin-bottom: 10px;
+  flex-direction: column;
+  align-items: center;
 }
 
 button {
@@ -45,6 +29,7 @@ button {
   border: none;
   border-radius: 5px;
   cursor: pointer;
+  margin-right: 5px;
 }
 
 button:hover {
@@ -56,24 +41,62 @@ ol {
   padding: 0;
 }
 
+li {
+  margin-bottom: 10px;
+  position: relative;
+}
 
 li {
-  /*text-align: center;*/
   margin-bottom: 10px;
-  position: relative; 
+  position: relative;
+  display: flex; 
+  align-items: center; 
+}
+
+li input[type="datetime-local"] {
+  margin-left: 10px;
 }
 
 li button {
-  margin-left: 10px;
   background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: 5px;
   visibility: hidden;
 }
 
-li:hover button {
-  background-color: rgb(237, 16, 38);
+li :hover button {
+  background-color: #bf2c38;
   visibility: visible; 
 }
 
+li input[type="datetime-local"] {
+  position: absolute;
+  right: 10px;
+  bottom: 5px;
+  color: greenyellow;
+}
+
+li.Normal {
+  color: white;
+}
+
+li.DueWithIn1Hour {
+  color: yellow;
+}
+
+li.DueWithIn2Hour {
+  color: orange;
+}
+
+li.Overdue {
+  color: red;
+}
+li.NoDueDate{
+  color: greenyellow;
+}
 
 h1 {
   text-align: center;
